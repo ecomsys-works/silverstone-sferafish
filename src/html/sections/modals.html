@@ -1,0 +1,176 @@
+<!-- Кнопки открытия -->
+<!-- <button data-modal="program" class="open-modal-btn">Получить программу</button>
+<button data-modal="partner" class="open-modal-btn">Стать партнером</button> -->
+
+<!-- Модалка: Получить программу -->
+<div data-modal-id="program" class="modal hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+	<!-- Контент модалки -->
+	<div
+		class="modal-content fade-up relative bg-gray-800 md:rounded-[10px] h-full md:h-[initial] max-w-[860px] w-full px-[30px] py-[100px] sm:p-[90px] flex flex-col items-center justify-center text-center transition-transform duration-300 transform scale-95 opacity-0 overflow-hidden"
+   
+	>
+		<!-- Кнопка закрытия -->
+		<button class="close-modal absolute top-[35px] right-[35px] text-white text-[24px] hover:text-gray-300 transition-colors">
+			<svg class="w-[15px] h-[15px]">
+				<use href="./icons/symbol/sprite.svg#close"></use>
+			</svg>
+		</button>
+
+		<!-- Заголовок -->
+		<h2 class="text-white text-[40px] sm:text-[50px] font-bold font-transforma uppercase tracking-[-0.03em] leading-[1]">
+			Получите программу <br />
+			конференции
+		</h2>
+
+		<!-- Подзаголовок / описание -->
+		<p class="text-white text-[19px] sm:text-[20px] mb-[33px]">
+			Оставьте заявку, чтобы получить <br> программу конференции
+		</p>
+
+		<!-- Форма -->
+		<form action="submit-program.php" method="POST" class="w-full max-w-[350px] flex flex-col items-center">
+			<!-- Имя -->
+			<input
+				type="text"
+				name="name"
+				placeholder="Ваше имя"
+				class="rounded-[30px] py-[15px] px-[30px] text-[13px] placeholder-gray-400 mb-[10px] w-full focus:outline-gray-400"
+			/>
+
+			<!-- Телефон -->
+			<input
+				type="tel"
+				name="phone"
+        id="phone-mask-1"
+				placeholder="+ 7 (___) ___-__-__"
+				class="rounded-[30px] py-[15px] px-[30px] text-[13px] placeholder-gray-400 mb-[10px] w-full focus:outline-gray-400"
+			/>
+
+			<!-- Email -->
+			<input
+				type="email"
+				name="email"
+				placeholder="Email"
+				class="rounded-[30px] py-[15px] px-[30px] text-[13px] placeholder-gray-400 mb-[10px] w-full focus:outline-gray-400"
+			/>
+
+			<!-- Кастомный чекбокс -->
+			<label class="w-full flex gap-[10px] mb-[30px] cursor-pointer select-none">
+				<div
+					class="mt-[2px] flex-shrink-0 w-[16px] h-[16px] border-2 border-white rounded-full flex items-center justify-center relative"
+				>
+					<input type="checkbox" name="agreement" class="absolute w-full h-full opacity-0 cursor-pointer" required />
+					<!-- Иконка галочки -->
+					<svg
+						class="w-[12px] h-[12px] text-white hidden pointer-events-none"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="3"
+						viewBox="0 0 24 24"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+					</svg>
+				</div>
+				<span class="text-white text-left text-[14px] leading-[1.2]"
+					>Нажимая на кнопку я даю согласие на обработку персональных данных</span
+				>
+			</label>
+
+			<!-- Кнопка отправки -->
+			<button
+				type="submit"
+				class="open-modal-btn w-full flex items-center justify-center px-[40px] h-[52px] rounded-[30px] text-white bg-gradient-to-r from-[#f4a77f] to-[#ee7c7f] transition-all duration-300 hover:brightness-105 active:scale-95"
+			>
+				Скачать программу
+			</button>
+		</form>
+	</div>
+</div>
+
+
+
+
+<!-- Модалка: Стать партнером -->
+<div data-modal-id="partner" class="modal hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+	<!-- Контент модалки -->
+	<div
+		class="modal-content fade-up relative bg-gray-800 md:rounded-[10px] h-full md:h-[initial] max-w-[860px] w-full px-[30px] py-[100px] sm:p-[90px] flex flex-col items-center justify-center text-center transition-transform duration-300 transform scale-95 opacity-0 overflow-hidden"
+   
+	>
+		<!-- Кнопка закрытия -->
+		<button class="close-modal absolute top-[35px] right-[35px] text-white text-[24px] hover:text-gray-300 transition-colors">
+			<svg class="w-[15px] h-[15px]">
+				<use href="./icons/symbol/sprite.svg#close"></use>
+			</svg>
+		</button>
+
+		<!-- Заголовок -->
+		<h2 class="text-white text-[40px] sm:text-[50px] font-bold font-transforma uppercase tracking-[-0.03em] leading-[1]">
+			Станьте партнером <br> «РЫБА-2026»
+		</h2>
+
+		<!-- Подзаголовок / описание -->
+		<p class="text-white text-[19px] sm:text-[20px] mb-[33px]">
+			Оставьте заявку, чтобы получить индивидуальное <br> предложение по форматам партнерства
+		</p>
+
+		<!-- Форма -->
+		<form action="submit-partner.php" method="POST" class="w-full max-w-[350px] flex flex-col items-center">
+			<!-- Имя -->
+			<input
+				type="text"
+				name="name"
+				placeholder="Ваше имя"
+				class="rounded-[30px] py-[15px] px-[30px] text-[13px] placeholder-gray-400 mb-[10px] w-full focus:outline-gray-400"
+			/>
+
+			<!-- Телефон -->
+			<input
+				type="tel"
+				name="phone"
+        id="phone-mask-2"
+				placeholder="+ 7 (___) ___-__-__"
+				class="phone-mask rounded-[30px] py-[15px] px-[30px] text-[13px] placeholder-gray-400 mb-[10px] w-full focus:outline-gray-400"
+			/>
+
+			<!-- Email -->
+			<input
+				type="email"
+				name="email"
+				placeholder="Email"
+				class="rounded-[30px] py-[15px] px-[30px] text-[13px] placeholder-gray-400 mb-[10px] w-full focus:outline-gray-400"
+			/>
+
+			<!-- Кастомный чекбокс -->
+			<label class="w-full flex gap-[10px] mb-[30px] cursor-pointer select-none">
+				<div
+					class="mt-[2px] flex-shrink-0 w-[16px] h-[16px] border-2 border-white rounded-full flex items-center justify-center relative"
+				>
+					<input type="checkbox" name="agreement" class="absolute w-full h-full opacity-0 cursor-pointer" required />
+					<!-- Иконка галочки -->
+					<svg
+						class="w-[12px] h-[12px] text-white hidden pointer-events-none"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="3"
+						viewBox="0 0 24 24"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+					</svg>
+				</div>
+				<span class="text-white text-left text-[14px] leading-[1.2]"
+					>Нажимая на кнопку я даю согласие на обработку персональных данных</span
+				>
+			</label>
+
+			<!-- Кнопка отправки -->
+			<button
+				type="submit"
+				class="open-modal-btn w-full flex items-center justify-center px-[40px] h-[52px] rounded-[30px] text-white bg-gradient-to-r from-[#f4a77f] to-[#ee7c7f] transition-all duration-300 hover:brightness-105 active:scale-95"
+			>
+				Стать партнером
+			</button>
+		</form>
+	</div>
+</div>
+

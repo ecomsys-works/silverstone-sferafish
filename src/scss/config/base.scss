@@ -1,0 +1,70 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+BASE
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+html {
+	scroll-behavior: smooth;
+}
+html,
+body {
+	inline-size: 100%;
+	block-size: 100%;
+}
+body {
+	overscroll-behavior: none;
+	text-rendering: optimizelegibility;
+	text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-wrap: balance;
+}
+
+.container{
+	margin-inline: auto;
+	min-inline-size: 320px;
+	max-inline-size: 1440px;
+	padding-inline: 20px;	
+	@include lg {
+		padding-inline: 75px;
+	}
+	@include sm {
+		padding-inline: 50px;
+	}
+}
+
+
+.img-responsive {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.image-bg {
+	position: relative;
+
+	img {
+		display: block;
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		object-fit: cover;
+		block-size: 100%;
+		inline-size: 100%;
+	}
+}
+
+.wrapper {
+	display: flex;
+	min-block-size: 100%;
+
+	/** Поменять на clip - если используется в проекте position: sticky */
+	overflow: hidden;
+	flex-direction: column;
+}
+
+.main {
+	position: relative;
+	flex: 1 1 auto;
+}

@@ -1,0 +1,359 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+COMPONENTS
+--------------------------------------------------------------------------------------------------------------------------------*/
+html {
+	opacity: 0.25;
+	scroll-behavior: smooth;
+	transition: var(--transition);
+
+	&.loaded {
+		opacity: 1;
+	}
+}
+
+.text-sm375 {
+	@media (max-width: 400px) {
+		font-size: 29px !important;
+	}
+}
+
+.modal-content {
+	background-size: cover;
+	background-position: center;
+	background-image: url("../images/popup-bgg.webp");
+}
+
+.bg-mobile-left-35 {
+	background-position: center top;
+}
+
+/* styles.css или tailwind.css */
+@media (max-width: 767px) {
+	/* мобильная версия */
+	.bg-mobile-left-35 {
+		background-position: 35% top !important;
+	}
+}
+
+.swiper * {
+	user-select: none;
+}
+
+/* базовое позиционирование, как у Swiper */
+
+.speaker-button-prev,
+.speaker-button-next {
+	position: absolute;
+	top: 50%;
+	/* центр по вертикали */
+	transform: translateY(-100%);
+	z-index: 10;
+	/* поверх слайдов */
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.partners-button-prev,
+.partners-button-next {
+	position: absolute;
+	top: 50%;
+	/* центр по вертикали */
+	transform: translateY(-50%);
+	z-index: 10;
+	/* поверх слайдов */
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* PAgination foir sliders */
+.partners-pagination,
+.lastyear-pagination,
+.tickets-pagination,
+.benefits-pagination,
+.tabs-pagination,
+.speaker-pagination,
+.gallery-pagination {
+	width: auto !important;
+}
+
+/* базовые точки */
+.partners-pagination .swiper-pagination-bullet,
+.lastyear-pagination .swiper-pagination-bullet,
+.tickets-pagination .swiper-pagination-bullet,
+.benefits-pagination .swiper-pagination-bullet,
+.tabs-pagination .swiper-pagination-bullet,
+.speaker-pagination .swiper-pagination-bullet,
+.gallery-pagination .swiper-pagination-bullet {
+	margin: 0 2.5px !important;
+	/* между ними 5px */
+	background: #7b7a7a;
+	/* голубой */
+	border-radius: 999px;
+	transition: all 0.3s ease;
+}
+
+.partners-pagination .swiper-pagination-bullet,
+.lastyear-pagination .swiper-pagination-bullet,
+.tickets-pagination .swiper-pagination-bullet,
+.benefits-pagination .swiper-pagination-bullet,
+.speaker-pagination .swiper-pagination-bullet,
+.tabs-pagination .swiper-pagination-bullet,
+.gallery-pagination .swiper-pagination-bullet {
+	width: 13px !important;
+	height: 13px !important;
+}
+
+@media (max-width: 768px) {
+	.partners-pagination .swiper-pagination-bullet,
+	.lastyear-pagination .swiper-pagination-bullet,
+	.tickets-pagination .swiper-pagination-bullet,
+	.benefits-pagination .swiper-pagination-bullet,
+	.gallery-pagination .swiper-pagination-bullet,
+	.speaker-pagination .swiper-pagination-bullet,
+	.tabs-pagination .swiper-pagination-bullet {
+		width: 9px !important;
+		height: 9px !important;
+	}
+}
+
+/* активная точка */
+
+.partners-pagination .swiper-pagination-bullet-active,
+.lastyear-pagination .swiper-pagination-bullet-active,
+.tickets-pagination .swiper-pagination-bullet-active,
+.benefits-pagination .swiper-pagination-bullet-active,
+.tabs-pagination .swiper-pagination-bullet-active,
+.speaker-pagination .swiper-pagination-bullet-active,
+.gallery-pagination .swiper-pagination-bullet-active {
+	opacity: 1;
+	background: linear-gradient(90deg, #1a27e8 0%, #4a55ee 100%);
+}
+
+/* Gallery slider */
+@media (min-width: 768px) {
+	.gallery-swiper {
+		overflow: visible !important;
+	}
+
+	.gallery-swiper .swiper-wrapper {
+		display: flex !important;
+		gap: 10px;
+		transform: none !important;
+	}
+
+	.gallery-swiper .swiper-slide {
+		height: auto !important;
+	}
+
+	.gallery-swiper .swiper-slide:nth-child(1) {
+		width: 44% !important;
+	}
+
+	.gallery-swiper .swiper-slide:nth-child(2) {
+		width: 26% !important;
+	}
+
+	.gallery-swiper .swiper-slide:nth-child(3) {
+		flex: 1;
+	}
+}
+
+/* когда свайпер уничтожен на десктопе */
+@media (min-width: 768px) {
+	.benefitsSlider .swiper-wrapper {
+		display: grid !important;
+		grid-template-columns: 1fr 1fr;
+		gap: 12px;
+	}
+
+	.benefitsSlider .swiper-slide {
+		width: auto !important;
+	}
+}
+
+.benefitsSlider .swiper-wrapper {
+	align-items: stretch;
+}
+
+.benefitsSlider .swiper-slide {
+	height: auto;
+	display: flex;
+}
+
+.ticketsSwiper .swiper-wrapper {
+	align-items: stretch;
+}
+
+.ticketsSwiper .swiper-slide {
+	height: auto;
+	display: flex;
+}
+
+.small-bullet {
+	list-style: none;
+	/* убираем стандартные точки */
+	padding-left: 12px;
+	/* общий padding не нужен */
+}
+
+.small-bullet li {
+	position: relative;
+	padding-left: 24px;
+	/* ширина точки + margin до текста */
+}
+
+.small-bullet li::before {
+	content: "•";
+	font-size: 18px;
+	color: currentColor;
+	position: absolute;
+	left: 0;
+	/* точка слева */
+	top: 0;
+	/* можно подрегулировать по вертикали */
+}
+
+/*======================================================================================
+Vertical holes strips psevdo
+=======================================================================================*/
+.bg-siniyy-gradient {
+	background: linear-gradient(90deg, #1a27e8 0%, #4a55ee 100%);
+}
+
+.bg-siniyy-gradient-reverse {
+	background: linear-gradient(90deg, #4a55ee 0%, #1a27e8 100%);
+}
+
+/* родитель обязательно relative */
+.cta-left {
+	position: relative;
+}
+
+/* ===== DESKTOP ленточка (вертикальная) ===== */
+.cta-left::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 2px;
+	transform: translate(100%, -50%);
+
+	width: 16px;
+	/* подгони под свою картинку */
+	height: 85%;
+
+	background-image: url("../images/bluehole-strip-vertical.webp");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+
+	pointer-events: none;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 1279px) {
+	.cta-left::after {
+		top: auto;
+		bottom: 1px;
+		left: 50%;
+		right: auto;
+
+		transform: translate(-50%, 100%);
+
+		width: 102%;
+		height: 14px;
+
+		background-image: url("../images/bluehole-strip-horizontal.webp");
+		background-size: contain;
+	}
+}
+
+/* Псевдоэлементы для соединительной полосы */
+.card-with-stripe::after {
+	content: "";
+	position: absolute;
+	background-image: url("../images/grayhole-strip-vertical.webp");
+	/* вертикальная полоска */
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: 17px;
+	/* ширина полоски */
+	height: 95%;
+	/* тянем по высоте карточки */
+	top: 50%;
+	transform: translate(100%, -50%);
+	right: 1px;
+	/* отступ между карточками */
+}
+
+@media (max-width: 767px) {
+	.grid.md\:grid-cols-3 {
+		grid-template-columns: 1fr;
+		/* одна колонка на мобилке */
+	}
+
+	.card-with-stripe::after {
+		background-image: url("../images/grayhole-strip-horizontal.webp");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		/* горизонтальная полоска */
+		width: 100%;
+		/* тянем на всю ширину */
+		height: 17px;
+		/* высота полоски */
+		top: auto;
+		bottom: 1px;
+		/* расстояние от карточки снизу */
+		left: 50%;
+		transform: translate(-50%, 100%);
+	}
+}
+
+/* last year */
+@media (min-width: 768px) {
+	.lastYearSwiper .swiper-wrapper {
+		display: flex !important;
+		flex-wrap: wrap !important;
+		gap: 12px !important;
+	}
+
+	.lastYearSwiper .swiper-slide {
+		height: auto !important;
+	}
+}
+
+/* FAQ */
+.faq-content {
+	height: 0;
+	overflow: hidden;
+	transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.active .faq-content {
+	height: auto;
+}
+
+.faq-typography {
+	font-size: 17px;
+	line-height: 105%;
+}
+
+@media (max-width: 640px) {
+	.faq-typography {
+		font-size: 15px;
+	}
+}
+
+.faq-typography ul {
+	list-style: disc;
+	padding-left: 20px;
+}
+
+.faq-typography li {
+	margin-left: 6px;
+}

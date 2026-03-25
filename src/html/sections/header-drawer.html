@@ -1,0 +1,46 @@
+
+<!-- Выезжающий канвас -->
+<div
+	id="mobile-drawer"
+	class="fixed top-0 right-0 h-full w-full bg-belyy transform translate-x-full transition-transform duration-500 z-[60] flex flex-col"
+>
+	<!-- Верхняя панель: логотип + закрыть -->
+	<div class="flex items-center justify-between py-[25px] px-[20px] flex-shrink-0">
+		<!-- Логотип Congress Color -->
+		<a href="#">
+			<svg class="w-[240px] h-[30px]">
+				<use href="./icons/symbol/sprite.svg#logo-congress-color"></use>
+			</svg>
+		</a>
+
+		<!-- Кнопка закрыть -->
+		<button id="drawer-close" class="focus:outline-none mr-3  text-chernyy">
+			<svg class="w-[15px] h-[15px]">
+				<use href="./icons/symbol/sprite.svg#close"></use>
+			</svg>
+		</button>
+	</div>
+
+	<!-- Контейнер с меню + футером, скроллится -->
+	<div class="flex-1 flex flex-col justify-between overflow-y-auto px-[20px]">
+		<!-- Меню -->
+		<nav class="flex flex-col items-start mt-[25px] gap-[30px]">
+			<a href="#speakers" class="text-[28px] font-semibold font-merret text-chernyy hover:text-[#f4a77f] transition-colors">Спикеры</a>
+			<a href="#benefits" class="text-[28px] font-semibold font-merret text-chernyy hover:text-[#f4a77f] transition-colors">О конференции</a>
+			<a href="#tickets" class="text-[28px] font-semibold font-merret text-chernyy hover:text-[#f4a77f] transition-colors">Билеты</a>
+			<a href="#partnerss" class="text-[28px] font-semibold font-merret text-chernyy hover:text-[#f4a77f] transition-colors">Партнеры</a>
+			<a href="#faqq" class="text-[28px] font-semibold font-merret text-chernyy hover:text-[#f4a77f] transition-colors">Вопросы</a>
+		</nav>
+
+		<!-- Футер с контактами -->
+		<div
+			class="mt-[50px] pb-[50px] flex flex-col space-y-[20px] text-chernyy flex-shrink-0"
+			style="font-family: &quot;MyriadPro&quot;, sans-serif; font-size: 20px; line-height: 120%"
+		>
+			<span>Санкт-Петербург, ул. Блохина, д.9, офис 312а, БЦ «Кронверк»</span>
+			<span>info@sfm.events</span>
+			<span>+7 (812) 245-67-70</span>
+		</div>
+	</div>
+</div>
+

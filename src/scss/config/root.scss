@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ROOT
+--------------------------------------------------------------------------------------------------------------------------------*/
+:root {
+	/* ===== Основной UI ===== */
+	--font-main: "InterTight", sans-serif;
+	--font-ui: "InterTight", sans-serif;
+
+	/* ===== Заголовки ===== */
+	--font-heading: "MoniqaHeading", sans-serif;
+	--font-heading-semibold: "MoniqaHeading", sans-serif;
+
+	/* ===== Узкие заголовки ===== */
+	--font-heading-narrow: "MoniqaHeadingNarrow", sans-serif;
+
+	/* ===== Параграф ===== */
+	--font-paragraph: "MoniqaParagraph", sans-serif;
+	--font-paragraph-narrow: "MoniqaParagraphNarrow", sans-serif;
+
+	/* ===== Myriad ===== */
+	--font-myriad: "MyriadPro", sans-serif;
+	--font-myriad-condensed: "MyriadProSemiCondensed", sans-serif;
+
+	/* ===== Transforma ===== */
+	--font-accent: "TransformaSansTrial", sans-serif;
+
+	// Colors
+	--belyy: #fff;
+	--sirenevyy: #f5f7ff;
+	--chernyy: #0a0d20;
+	--chernyy-900: rgba(10, 13, 32, 0.9);
+	--chernyy-500: rgba(10, 13, 32, 0.5);
+	--siniy: #1a27e8;
+
+	//Addons
+	--transition: all 0.8s ease-in-out;
+}
