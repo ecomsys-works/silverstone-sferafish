@@ -5,16 +5,16 @@ module.exports = {
     container: {
       center: true,
       screens: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1440px",
+        sm: "40rem",
+        md: "48rem",
+        lg: "64rem",
+        xl: "90rem",
       },
       padding: {
-        DEFAULT: "20px", // мобилка        
-        lg: "30px",      // планшет
-        xl: "50px",      // десктоп
-        xxl: "75px"
+        DEFAULT: "1.25rem", // мобилка        
+        lg: "1.875rem",      // планшет
+        xl: "3.125rem",      // десктоп
+        xxl: "4.6875rem"
       },
     },
     extend: {
@@ -43,7 +43,7 @@ module.exports = {
         "transforma": ["TransformaSansTrial", "sans-serif"],
       },     
       maxWidth: {
-        "container": "1440px",
+        "container": "90rem",
       },
     },
   },

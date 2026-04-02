@@ -10,6 +10,9 @@ import { initFaq } from "./modules/faq-accordions.js";
 import { initPartnersSwiper } from "./modules/partners-slider.js";
 import { initDalpModalsSimple } from "./modules/modals.js";
 
+import autoREM from "/helpers/autoRem.js";
+autoREM(1440, 16);
+
 const phoneInput1 = document.getElementById('phone-mask-1');
 const phoneInput2 = document.getElementById('phone-mask-2');
 const im1 = new Inputmask("+7 (999) 999-99-99");

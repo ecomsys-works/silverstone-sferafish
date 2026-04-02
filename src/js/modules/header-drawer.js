@@ -14,7 +14,7 @@ export function initHeaderDrawer() {
     // Функция для обновления логотипа, бургера и хедера
     function updateHeader() {
         if (window.scrollY > 100) {
-            header.style.boxShadow = '0 1px 10px 0 rgba(103, 103, 103, 0.55)';
+            header.style.boxShadow = '0 0.0625rem 0.625rem 0 rgba(103, 103, 103, 0.55)';
             header.classList.add('bg-white');
             logoSvg.querySelector('use').setAttribute('href', './icons/symbol/sprite.svg#logo-congress-color');
             burgerSvg.classList.remove('text-belyy');

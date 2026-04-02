@@ -8,7 +8,7 @@ export function initFaq(firstOpenIndex = null){
     const content = item.querySelector(".faq-content");
     const icon = item.querySelector("svg");
 
-    content.style.height = "0px";
+    content.style.height = "0rem";
     item.classList.remove("active");
     icon.classList.remove("rotate-45");
   });
@@ -76,7 +76,7 @@ export function initFaq(firstOpenIndex = null){
     item.classList.remove("active");
     icon.classList.remove("rotate-45");
 
-    content.style.height = "0px";
+    content.style.height = "0rem";
   }
 
 }
